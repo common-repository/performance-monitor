@@ -1,0 +1,329 @@
+/**
+ * Styles for the metrics section.
+ */
+.qtpm-metrics {
+	margin-top: 20px;
+
+	.qtpm-metrics-title {
+		font-size: 22px;
+		margin: 10px 0;
+	}
+
+	/**
+	 * Styles for the metrics container.
+	 */
+	.qtpm-metrics-container {
+		display: flex;
+		gap: 20px;
+
+		/**
+		 * Styles for individual metric containers.
+		 */
+		.qtpm-metric-container {
+			align-items: center;
+			background: #fff;
+			box-shadow: 0px 0px 1px 0px #000;
+			display: grid;
+			grid-template-columns: 30px 1fr;
+			grid-template-rows: auto 30px;
+			padding: 10px;
+			width: 20%;
+
+			.qtpm-metric-icon {
+				width: 15px;
+				height: 15px;
+				border-radius: 100%;
+				box-shadow: 0px 0px 1px 0px #000;
+			}
+
+			.qtpm-metric-value {
+				grid-column-start: 2;
+				font-size: 22px;
+			}
+		}
+
+		.qtpm-metric-pass {
+			.qtpm-metric-icon {
+				background: #00cc66;
+			}
+
+			.qtpm-metric-value {
+				color: #00cc66;
+			}
+		}
+
+		.qtpm-metric-fail {
+			.qtpm-metric-icon {
+				background: #ff3333;
+			}
+
+			.qtpm-metric-value {
+				color: #ff3333;
+			}
+		}
+
+		.qtpm-metric-average {
+			.qtpm-metric-icon {
+				background: #ffaa33;
+			}
+
+			.qtpm-metric-value {
+				color: #ffaa33;
+			}
+		}
+	}
+}
+
+/**
+ * Styles for the metric filter.
+ */
+.qtpm-metricfilter {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	margin: 10px;
+	gap: 5px;
+
+	[name=matricfilter] {
+		display: none;
+	}
+
+	label {
+		border-radius: 5px;
+		padding: 1px 4px 2px;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+
+	label.active {
+		background: #000;
+		color: #fff;
+		text-decoration: none;
+	}
+}
+
+/**
+ * Styles for the audit section.
+ */
+.qtpm-audit {
+	margin-bottom: 20px;
+
+	.qtpm-audit-heading {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.qtpm-audit-title {
+			font-size: 22px;
+			margin: 10px 0;
+		}
+	}
+
+
+	.qtpm-audit-accordion {
+		>div {
+			border: 1px solid #c3c4c7;
+			margin-bottom: 2px;
+		}
+
+		a {
+			.dashicons {
+				text-decoration: none;
+			}
+		}
+
+		a {
+			.dashicons {
+				text-decoration: none;
+			}
+		}
+
+		.qtpm-audit-accordion-heading {
+			font-weight: 600;
+			margin: 0;
+
+			.qtpm-audit-accordion-trigger {
+				align-items: center;
+				background: #fff;
+				border: 0;
+				cursor: pointer;
+				display: flex;
+				justify-content: space-between;
+				padding: 1em 3.5em 1em 1.5em;
+				position: relative;
+				text-align: left;
+				width: 100%;
+
+				.qtpm-audit-icon {
+					border-radius: 100%;
+					box-shadow: 0 0 1px 0 #000;
+					height: 15px;
+					width: 15px;
+					margin-right: 5px;
+				}
+			}
+
+			.title {
+				pointer-events: none;
+				font-weight: 600;
+				flex-grow: 1;
+			}
+
+			.badge {
+				padding: 0.1rem 0.5rem 0.15rem;
+				color: #2c3338;
+				font-weight: 600;
+			}
+
+			.icon {
+				border: solid #50575e;
+				border-width: 0 2px 2px 0;
+				height: 0.5rem;
+				pointer-events: none;
+				position: absolute;
+				right: 1.5em;
+				top: 50%;
+				transform: translateY(-70%) rotate(45deg);
+				width: 0.5rem;
+			}
+
+			.blue {
+				border: 1px solid #72aee6;
+			}
+
+			.orange {
+				border: 1px solid #72aee6
+			}
+
+			.red {
+				border: 1px solid #e65054
+			}
+		}
+
+		.qtpm-audit-pass {
+			.qtpm-audit-accordion-heading {
+				.qtpm-audit-accordion-trigger {
+					.qtpm-audit-icon {
+						background: #00cc66;
+					}
+
+					.badge {
+						color: #00cc66;
+						border: 1px solid #00cc66;
+					}
+				}
+			}
+		}
+
+		.qtpm-audit-fail {
+			.qtpm-audit-accordion-heading {
+				.qtpm-audit-accordion-trigger {
+					.qtpm-audit-icon {
+						background: #ff3333;
+					}
+
+					.badge {
+						color: #ff3333;
+						border: 1px solid #ff3333;
+					}
+				}
+			}
+		}
+
+		.qtpm-audit-average {
+			.qtpm-audit-accordion-heading {
+				.qtpm-audit-accordion-trigger {
+					.qtpm-audit-icon {
+						background: #ffaa33;
+					}
+
+					.badge {
+						color: #ffaa33;
+						border: 1px solid #ffaa33;
+					}
+				}
+			}
+		}
+
+		.qtpm-audit-accordion-trigger[aria-expanded=true] {
+			.icon {
+				transform: translateY(-30%) rotate(-135deg);
+			}
+		}
+	}
+
+	.qtpm-audit-accordion-panel {
+		background: #fff;
+		padding: 10px 10px 10px 40px;
+
+		p {
+			margin-top: 0px;
+		}
+	}
+}
+
+.qtpm-metrics-gauge {
+	.qtpm-metrics-gauge-title {
+		font-size: 22px;
+		margin: 10px 0;
+	}
+
+	.qtpm-metrics-gauge-container {
+		width: 150px;
+		position: relative;
+
+		.gauge-overall {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			top: 0px;
+			bottom: 0px;
+			left: 0px;
+			right: 0px;
+			z-index: -1;
+
+			>span:first-child {
+				width: 80%;
+				height: 80%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 100%;
+				background: #abd;
+				color: #fff;
+				font-size: 32px;
+			}
+		}
+	}
+}
+
+.qtpm-pagespeed-device-tab {
+	align-items: center;
+	display: flex;
+	gap: 5px;
+	justify-content: center;
+	margin: 10px;
+
+	[name=qtpm_pagespeed_device] {
+		display: none;
+	}
+
+	label {
+		border-radius: 5px;
+		padding: 5px 7px;
+		text-decoration: underline;
+		font-size: 14px;
+		cursor: pointer;
+	}
+
+	label.active {
+		background: #000;
+		color: #fff;
+		text-decoration: none;
+	}
+}
+
+#qtpm-pagespeed-mobile-container {
+	display: none;
+}

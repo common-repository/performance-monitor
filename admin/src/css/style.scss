@@ -1,0 +1,109 @@
+@import './admin_component/chart';
+@import './admin_component/system-info';
+@import './admin_component/pagespeed';
+@import './admin_component/curl';
+
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+body {
+	padding: 0;
+	margin: 0;
+}
+
+.qtpm-tab-content {
+	display: none;
+}
+
+.qtpm-hide {
+	display: none;
+}
+
+.qtpm-show {
+	display: block;
+}
+
+.nav-tab {
+	cursor: pointer;
+}
+
+/* Accordion style */
+.qtpm-accordion {
+	border: 1px solid #c3c4c7;
+
+	.qtpm-accordion-heading {
+		border-top: 1px solid #c3c4c7;
+		font-weight: 600;
+		margin: 0;
+
+		&:first-child {
+			border-top: none;
+		}
+
+		.qtpm-accordion-trigger {
+			background: #fff;
+			border: 0;
+			color: #2c3338;
+			cursor: pointer;
+			display: flex;
+			font-weight: 400;
+			margin: 0;
+			padding: 10px 50px 10px 20px;
+			min-height: 46px;
+			position: relative;
+			text-align: left;
+			width: 100%;
+			align-items: center;
+			justify-content: space-between;
+			user-select: auto;
+		}
+
+		.title {
+			pointer-events: none;
+			font-weight: 600;
+			flex-grow: 1;
+		}
+
+		.badge {
+			padding: 2px 8px 3px;
+			color: #2c3338;
+			font-weight: 600;
+		}
+
+		.badge.blue {
+			border: 1px solid #72aee6;
+		}
+
+		.icon {
+			border: solid #50575e;
+			border-width: 0 2px 2px 0;
+			height: 8px;
+			pointer-events: none;
+			position: absolute;
+			right: 24px;
+			top: 50%;
+			transform: translateY(-70%) rotate(45deg);
+			width: 8px;
+		}
+
+		.qtpm-accordion-trigger[aria-expanded=true] .icon {
+			transform: translateY(-30%) rotate(-135deg);
+		}
+	}
+
+	.qtpm-accordion-panel {
+		margin: 0;
+		padding: 16px 20px;
+		background: #fff;
+	}
+}
+
+/* Styling for the container of cron frequency fields */
+#qtpm-cron-frequency-fields-container {
+	display: flex;
+
+	>div {
+		margin-right: 10px;
+	}
+}

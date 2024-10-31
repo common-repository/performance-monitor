@@ -1,0 +1,60 @@
+.qtpm-chart-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 60px;
+	clear: both;
+	padding: 20px;
+	padding-top: 0px;
+
+	.qtpm-chart {
+		display: flex;
+		margin-top: 20px;
+
+		.qtpm-chart-canvas {
+			width: 520px;
+			height: 350px;
+			position: relative;
+
+			.qtpm-chart-messege {
+				position: absolute;
+				top: 45%;
+				left: 55%;
+				transform: translate(-50%, -50%);
+				white-space: nowrap;
+			}
+		}
+	}
+}
+
+.qtpm-chart-select-duration {
+	float: right;
+	label {
+		margin: 0 5px;
+	}
+}
+
+#qtpm-custom-duration {
+	align-items: center;
+	clear: both;
+	display: none;
+	flex-direction: row;
+	float: inline-end;
+	margin-top: 10px;
+
+	label {
+		margin-right: 10px;
+	}
+
+	input {
+		width: 150px;
+	}
+}
+
+#qtpm-date-error {
+	clear: both;
+	color: #ff3535;
+	float: inline-end;
+	font-weight: 700;
+	margin-right: 78px;
+	margin-top: 5px;
+}
